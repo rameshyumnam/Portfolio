@@ -21,11 +21,22 @@ nav {
     margin: 0;
 }
 
+@keyframes top {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    } to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .logo {
     font-size: 30px;
     color: white;
     transition: 1s;
     cursor: default;
+    animation: top 1.5s ease-in-out;
 }
 
 .logo:hover {
@@ -46,6 +57,7 @@ nav ul {
     display: flex;
     gap: 30px;
     list-style-type: none;
+    animation: top 1.5s ease-in-out;
 }
 
 
@@ -88,6 +100,7 @@ nav ul li a:hover::before {
     font-size: 24px;
     transition: 0.3s;
     display: none;
+    animation: top 1.5s ease-in-out;
 }
 
 #bar:hover {
@@ -107,12 +120,13 @@ nav ul li a:hover::before {
     gap: 15px;
     top: 5px;
     right: 5px;
-    background-color: #575757ca;
+    background-color: #575757de;
     padding: 8px 16px;
     width: 10rem;
     border-radius: 10px;
     outline: none;
     border: none;
+    animation: top 0.3s ease-in-out;
 }
 
 .toggle-menu li a {
@@ -140,11 +154,28 @@ nav ul li a:hover::before {
 
 #home {
     display: flex;
+    gap: 8px;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient( to right, #b0aaff, #8767f9);
+    background: linear-gradient( to right, #c7c3ff, #9a7dff);
     padding: 30px 20px;
     padding-top: 60px;
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#home .introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
 }
 
 #home img {
@@ -155,18 +186,21 @@ nav ul li a:hover::before {
     box-shadow: 2px 3px 5px rgb(0, 0, 0);
     border-left: 10px solid #04004e;
     outline: none;
+    animation: left 3.5s ease-in-out;
 }
 
 #home div h2 {
     color: #00004b;
     font-size: 30px;
     text-shadow: 0px 1px 1px black;
+    animation: left 0.5s ease-in-out;
 }
 
 #home div h1 {
     color: #510094;
     font-size: 34px;
     text-shadow: 0px 1px 1px black;
+    animation: left 1s ease-in-out;
 }
 
 #home div p {
@@ -175,15 +209,18 @@ nav ul li a:hover::before {
     max-width: 780px;
     color: #00004b;
     width: 100%;
+    animation: left 2s ease-in-out;
 }
 
 #home div h3 {
     color: #00004b;
     font: 30px;
     text-shadow: 0px 1px 1px black;
+    animation: left 1.5s ease-in-out;
 }
 
 #home div button {
+    width: 100px;
     padding: 5px 10px;
     background-color: navy;
     color: white;
@@ -192,6 +229,7 @@ nav ul li a:hover::before {
     border: none;
     border-radius: 5px;
     box-shadow: 1px 2px 3px black;
+    animation: left 2.5s ease-in-out;
 }
 
 #home div button:hover {
@@ -206,6 +244,7 @@ nav ul li a:hover::before {
     color: #00004b;
     text-shadow: 0px 0px 1px black;
     font-size: 20px;
+    animation: left 3s ease-in-out;
 }
 
 #home div .icons a i {
@@ -243,12 +282,14 @@ nav ul li a:hover::before {
     font-size: 30px;
     color: white;
     text-shadow: 0px 0px 1px black;
+    animation: top 1.5s ease-in-out;
 }
 
-#about img {
+#about .my-profile img {
     height: 20rem;
     width: 20rem;
     border-radius: 2px;
+    animation: left 1s ease-in-out;
 }
 
 #about .my-profile {
@@ -262,12 +303,14 @@ nav ul li a:hover::before {
 #about .my-profile h2 {
     color: rgb(33, 189, 33);
     text-shadow: 0px 0px 1px black;
+    animation: left 2s ease-in-out;
 }
 
 #about .my-profile p {
     color: #8dc8f0;
     line-height: 24px;
     letter-spacing: 1px;
+    animation: left 3.5s ease-in-out;
 }
 
 #projects {
@@ -286,11 +329,13 @@ nav ul li a:hover::before {
     font-size: 30px;
     color: #00004b;
     text-shadow: 0px 0px 1px black;
+    animation: top 1.5s ease-in-out;
 }
 
 #projects p {
     font-weight: 500;
     color: #17003b;
+    animation: top 1.5s ease-in-out;
 }
 
 .project-list {
@@ -316,6 +361,7 @@ nav ul li a:hover::before {
     background: #7fbdff;
     flex-flow: 340px;
     min-height: 290px;
+    animation: left 1.5s ease-in-out;
 }
 
 .project-list div h3 {
@@ -370,6 +416,7 @@ nav ul li a:hover::before {
     text-decoration: none;
     font-size: 20px;
     font: 800;
+    animation: top 1.5s ease-in-out;
 }
 
 #projects .more-projects:hover {
@@ -380,7 +427,7 @@ nav ul li a:hover::before {
     text-align: center;
     padding: 20px;
     padding-top: 60px;
-    background: #591dff;
+    background: #7442ff;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -390,6 +437,7 @@ nav ul li a:hover::before {
     font-size: 30px;
     color: #ffffff;
     text-shadow: 0px 0px 1px black;
+    animation: top 1.5s ease-in-out;
 }
 
 .skilled-icons {
@@ -402,6 +450,7 @@ nav ul li a:hover::before {
 
 .skilled-icons div {
     flex: 1;
+    animation: left 1.5s ease-in-out;
 }
 
 .skilled-icons img {
@@ -409,14 +458,14 @@ nav ul li a:hover::before {
 }
 
 .skilled-icons h3 {
-    color: rgb(0, 255, 255);
+    color: #a2ffff;
     text-shadow: 1px 1px 2px black;
     font-size: 20px;
 }
 
 #contact {
     text-align: center;
-    background: #69dbf1;
+    background: #7fd9eb;
     padding: 20px;
     padding-top: 60px;
 }
@@ -425,6 +474,7 @@ nav ul li a:hover::before {
     font-size: 30px;
     color: #00003c;
     text-shadow: 0px 0px 1px black;
+    animation: top 1.5s ease-in-out;
  }
 
 #contact h2 {
@@ -432,6 +482,7 @@ nav ul li a:hover::before {
     font-size: 20px;
     padding: 10px;
     text-shadow: 0px 0px 1px black;
+    animation: top 1.5s ease-in-out;
 }
 
 #contact .contact-box {
@@ -446,6 +497,7 @@ nav ul li a:hover::before {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    animation: left 3.5s ease-in-out;
 }
 
 .contact-box .message input {
@@ -506,6 +558,7 @@ nav ul li a:hover::before {
 
 .details h2 {
     font-size: 24px !important;
+    animation: left 1s ease-in-out;
 }
 
 .details div {
@@ -514,6 +567,7 @@ nav ul li a:hover::before {
     font-size: 16px;
     font-weight: 500;
     color: #00003c;
+    animation: left 2s ease-in-out;
 }
 
 .details .more-detail {
@@ -521,6 +575,7 @@ nav ul li a:hover::before {
     gap: 20px;
     font-size: 22px;
     padding: 10px;
+    animation: left 3s ease-in-out;
 }
 
 .details .more-detail a i {
@@ -729,7 +784,7 @@ footer div {
         padding-top: 60px;
     }
 
-    #home div {
+    #home .introduction {
         line-height: 20px;
     }
 
@@ -742,17 +797,17 @@ footer div {
     }
 
     #home div h3 {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     #home img {
-        height: 10rem;
-        width: 9rem;
+        height: 7rem;
+        width: 7rem;
+        border-left: 5px solid #04004e;;
     }
 
     #home div p {
-        font-size: 13px;
-        line-height: 14px;
+        display: none;
     }
 
     #home div button {
@@ -767,8 +822,13 @@ footer div {
         font-size: 26px;
     }
 
+    #about .my-profile h2 {
+        animation: top 2s ease-in-out;
+    }
+
     #about .my-profile p {
         font-size: 13px;
+        animation: top 1s ease-in-out;
     }
 
     #projects h1 {
@@ -793,10 +853,12 @@ footer div {
 
     .contact-box .message input {
         width: 18rem;
+        border: 1px solid #00003c;
     }
 
     .contact-box .message textarea {
         height: 6rem;
+        border: 1px solid #00003c;
     }
 
     .details .more-detail {
@@ -824,15 +886,6 @@ footer div {
 
     #home div h1 {
         font-size: 18px;
-    }
-
-    #home div h3 {
-        font-size: 16px;
-    }
-
-    #home img {
-        height: 8rem;
-        width: 7rem;
     }
 
     #home div p {
