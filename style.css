@@ -189,18 +189,8 @@ nav ul li a:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: left 3.5s ease-in-out, border 3s linear infinite;
+    animation: left 3.5s ease-in-out;
     box-sizing: border-box;
-}
-
-@keyframes border {
-    0% {
-        transform: translateY(-3px);
-    } 50% {
-        transform: translateY(3px);
-    } 100% {
-        transform: translateY(-3px);
-    }
 }
 
 #home .image img {
